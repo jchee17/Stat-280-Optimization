@@ -1,0 +1,20 @@
+4.d) cont'd
+While Newton's method generally was observed to take fewer iterations to converge, it took longer time to converge because newton's method requires computing the inverse of the hessian at each iteration which takes longer than just computing the gradient, for steepest descent. I provide timing data associated with the graphs provided. In newton's method I give the time taken during steepest descent, then the total time to convergence, all in seconds
+
+	 Steeepest Descent		Newton's Method
+(varing: c, p=0.50,epislon=10^-3)
+c_1=0.01 0.227165937424 		0.173135995865,1.25547099113
+c_1=0.25 0.208648920059 		0.141849040985,1.22780203819
+c_1=0.90 0.6731569767   		0.368420124054,4.76053309441
+
+(varying: p, c=0.25, epsilon=10^-3)
+p=0.05   0.522099018097 		0.32212805748,1.50520515442
+p=0.25   0.340490102768 		0.157691955566,1.37123894691
+p=0.90   5.25815796852  		3.54762196541,4.65321493149
+
+(varying epsilon, c=0.25, p=0.50)
+e=10^-3  0.304458141327 		0.275048017502,0.825142860413
+epsilon=10^-5				0.493538141251,1.58702397346
+epsilon=10^-8				0.256366014481,1.28790402412
+
+We see that a very high c and p lead to much longer convergence times for both steepest descent and newton's method. It is also interesting to note that there was no siginificant difference in convergence time for newton's method for episilon 10^-5 and 10^-8.
